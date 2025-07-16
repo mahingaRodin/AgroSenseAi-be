@@ -1,80 +1,64 @@
-Absolutely! Here's a clean, professional `README.md` file tailored for your **AgroSenseAI** backend project using FastAPI and ML models. You can customize the description or credits further if needed.
+# 🌱 AgroSenseAI Backend - Crop Disease & Pest Detection API
 
----
+This is the **backend service** of AgroSenseAI — a smart agriculture system that leverages machine learning to help farmers detect crop diseases and pests from images, and optionally analyze soil fertility using NPK sensor data.
 
-```markdown
-# 🌱 AgroSenseAI - Smart Crop & Soil Health API
-
-AgroSenseAI is an AI-powered backend system designed to help farmers detect crop diseases and pests from images, and analyze soil fertility using NPK data. Built with **FastAPI** and powered by **machine learning models**, this backend provides accessible APIs for smart agriculture in Africa and beyond.
-
----
+Built with **FastAPI** and **PyTorch**, this backend provides clean and ready-to-use APIs to power modern precision farming solutions.
 
 ## 🚀 Features
 
-- 🧠 **AI-Powered Detection**: Detects crop diseases and pests using image classification models.
-- 🌾 **Soil Fertility Insight**: Analyzes NPK data to evaluate soil health (future support).
-- 🔁 **Recommendation System**: Suggests treatment options based on detection results.
-- 📦 **Dockerized**: Easy to deploy anywhere using Docker.
-- 🔗 **RESTful API**: Clean, well-documented endpoints using FastAPI and OpenAPI (Swagger).
+- 🧠 **Crop Disease & Pest Detection** using ML models
+- 📤 **Image Upload API** with predictions in JSON
+- 📦 **Dockerized** for easy deployment
+- 📚 **Auto-generated API docs** via Swagger (FastAPI)
 
----
-
-## 🧰 Tech Stack
+## 🧰 Backend Tech Stack
 
 - **Backend Framework**: FastAPI
-- **ML Frameworks**: PyTorch, Torchvision
-- **Image Processing**: Pillow
+- **Machine Learning**: PyTorch, Torchvision
+- **Image Handling**: Pillow
+- **API Validation**: Pydantic
 - **Containerization**: Docker
-- **Deployment-Ready**: Render, Railway, or other cloud platforms
-
----
+- **Deployment**: Render, Railway, or any Docker-supported cloud
 
 ## 📁 Project Structure
-```
 
-agrosense-backend/
-├── app/
-│ ├── main.py # FastAPI app entry point
-│ ├── routes/ # API route definitions
-│ ├── services/ # Model logic and prediction functions
-│ ├── models/ # Trained ML models (.pt files)
-│ ├── utils/ # Preprocessing tools
+     app/
+    ├── main.py              # FastAPI entry point
+
+├── routes/ # API route handlers
+├── services/ # Model prediction logic
+├── models/ # Saved ML model files
+├── utils/ # Preprocessing tools
 ├── requirements.txt # Python dependencies
-├── Dockerfile # Container config
+├── Dockerfile # Docker container setup
 └── README.md # Project documentation
-
-````
-
----
 
 ## 🔌 API Endpoints
 
-| Method | Endpoint             | Description                          |
-|--------|----------------------|--------------------------------------|
-| POST   | `/disease/detect`    | Detect crop disease from image       |
-| POST   | `/pest/detect`       | Detect pests from crop image         |
-| GET    | `/docs`              | Interactive API documentation (Swagger) |
+| Method | Endpoint          | Description                       |
+| ------ | ----------------- | --------------------------------- |
+| POST   | `/disease/detect` | Detect crop disease from an image |
+| POST   | `/pest/detect`    | Detect pests from a crop image    |
+| GET    | `/docs`           | Swagger UI (API documentation)    |
 
-> Upload image files as `multipart/form-data`
-
----
+> All image uploads should be sent as `multipart/form-data`
 
 ## 🐳 Run with Docker
 
 ```bash
-# Build the image
+# Build Docker image
 docker build -t agrosenseai-backend .
 
-# Run the container
+# Run container locally
 docker run -p 8000:8000 agrosenseai-backend
-````
+```
 
-Access the API at:
-[http://localhost:8000/docs](http://localhost:8000/docs)
+API available at:
+👉 [http://localhost:8000/docs](http://localhost:8000/docs)
 
 ---
 
-## 📦 Install & Run Locally (No Docker)
+## 📦 Run Locally Without Docker
 
 ```bash
 git clone https://github.com/yourusername/agrosense-backend.git
@@ -85,40 +69,40 @@ uvicorn app.main:app --reload
 
 ---
 
-## 🧪 Testing (Optional)
-
-You can add test files under a `tests/` directory and use `pytest` to run them:
+## 🧪 Testing
 
 ```bash
 pip install pytest
 pytest
 ```
 
----
-
-## 🧠 Model Format
-
-- Models are stored in `app/models/` as `.pt` files (for PyTorch).
-- Make sure model names in the code match the filenames.
+_Add test files under a `tests/` directory._
 
 ---
 
-## 👨‍💻 Author
+## 📂 Model Format
+
+- Models are stored in `app/models/` directory.
+- Accepted formats: `.pt` (PyTorch)
+- Models are loaded at runtime for predictions.
+
+---
+
+## 👨‍💻 Maintainer
 
 **ODIIX**
-
-- Rwanda Coding Academy
-- Software & Embedded Systems Developer
-- Passionate about AI in agriculture 🌾🤖
+Rwanda Coding Academy
+Software Engineer | Embedded & AI Developer
 
 ---
 
 ## 📜 License
 
-This project is licensed under the **MIT License**. See `LICENSE` file for details.
+Licensed under the **MIT License**.
+See `LICENSE` file for details.
 
 ---
 
-## 🌍 Vision
+## 💡 Backend Mission
 
-> AgroSenseAI empowers smallholder African farmers with smart, accessible, and data-driven tools — promoting food security, better yields, and sustainable farming.
+> Delivering fast, reliable, and intelligent crop analysis tools for developers and farmers building the future of African agriculture.

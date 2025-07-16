@@ -4,3 +4,10 @@ pillow
 torch
 torchvision
 python-multipart
+passlib[bcrypt]
+pydantic[email]
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
+python-dotenv
+python-jose

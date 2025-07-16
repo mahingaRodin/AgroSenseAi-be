@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routes import disease, pest
+from app.routes import pest, disease
 
 app = FastAPI(title="AgroSenseAI Backend")
 

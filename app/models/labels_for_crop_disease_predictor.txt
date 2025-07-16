@@ -1,0 +1,8 @@
+0 algal
+1 anthracnose
+2 bird_eye_spot
+3 brown_light
+4 gray_light
+5 healthy
+6 red_leaf_spot
+7 white_spot

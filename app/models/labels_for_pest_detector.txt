@@ -1,0 +1,9 @@
+0 sawfly
+1 stem_borer
+2 grasshopper
+3 mites
+4 mosquito
+5 aphids
+6 army_worms
+7 bettle
+8 bollworm
